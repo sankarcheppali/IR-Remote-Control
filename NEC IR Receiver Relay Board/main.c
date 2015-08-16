@@ -167,7 +167,7 @@ unsigned char pin;
 static unsigned long rxbuffer;
 
 
-tdiff = ((timer<<8)+TMR0) ;     // calculate how much time has been passed since last interrupt 
+tdiff = ((timer<<8)+TMR0) ;     // calculate how much time has been passed since last interrupt , timer<<8 is similar to timer*256
 								// the time shold be less then time out and greater than PREPULSE 
 pin = IRSENSOR;					// store the current status of Sensor 
 TMR0 = 0;						// reset the timer0 to measure the next edge(interrupt) of input
